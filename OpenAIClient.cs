@@ -19,11 +19,11 @@ namespace Common
         private readonly string _apiKey;
         
 
-        public HttpResponseMessage GetResponsefromOpenAI(string _content)
+        public HttpResponseMessage GetResponsefromOpenAI(string _content_or_transcript,string _OpenAIApiKey)
 
         {
             
-            string apiKey = Sitecore.Configuration.Settings.GetSetting("OpenAIApiKey");
+            string apiKey = _OpenAIApiKey
             
             var _httpClient = new HttpClient();
             
